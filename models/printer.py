@@ -63,6 +63,7 @@ class Printer(Device):
             pages_extra = 500000.0
         else:
             pages_extra = 0.0
+
         if self.is_color:
             color_extra = 300000.0
         else:
@@ -123,6 +124,7 @@ class NetworkPrinter(Printer, INetworkable):
             color_str = "In màu"
         else:
             color_str = "In trắng đen"
+            
         if self._is_connected:
             net_str = f"IP: {self._ip_address}"
         else:
